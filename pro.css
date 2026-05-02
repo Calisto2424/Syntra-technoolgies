@@ -1,0 +1,423 @@
+/* ────────────────────────────────────────
+   Reset & base
+──────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue",
+    Arial, sans-serif;
+
+  /* Dark theme (igual à referência) */
+  --bg: #0e0e10;
+  --surface: #1a1a1f;
+  --surface-2: #222228;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --text: #f0f0f2;
+  --text-muted: #8e8e9a;
+  --text-dim: #5a5a68;
+
+  /* Accent Business (destaque) */
+  --accent: #5b5fef;
+  --accent-dark: #4446c7;
+  --accent-glow: rgba(91, 95, 239, 0.28);
+  --accent-light: rgba(91, 95, 239, 0.12);
+
+  /* Badges */
+  --badge-start-bg: rgba(52, 199, 89, 0.14);
+  --badge-start-fg: #4ade80;
+  --badge-biz-bg: rgba(91, 95, 239, 0.22);
+  --badge-biz-fg: #a5a8ff;
+  --badge-pro-bg: rgba(255, 184, 0, 0.14);
+  --badge-pro-fg: #fbbf24;
+
+  --radius: 20px;
+  --radius-sm: 10px;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--text)
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+/* ────────────────────────────────────────
+   Section header
+──────────────────────────────────────── */
+.planos-section {
+  width: 100%;
+  max-width: 1080px;
+}
+
+.planos-header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.planos-eyebrow {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+.planos-titulo {
+  font-size: clamp(30px, 4.5vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+
+.planos-sub {
+  font-size: 16px;
+  color: var(--text-muted);
+  font-weight: 400;
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ────────────────────────────────────────
+   Grid de planos
+──────────────────────────────────────── */
+.planos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+/* ────────────────────────────────────────
+   Card base
+──────────────────────────────────────── */
+.plano {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  transition: border-color 0.2s;
+  overflow: hidden;
+}
+
+.plano:hover {
+  border-color: var(--border-strong);
+}
+
+/* ── Destaque Business ── */
+.plano--destaque {
+  border-color: rgba(91, 95, 239, 0.45);
+  background: linear-gradient(160deg, #1c1c2e 0%, #18182a 100%);
+  transform: translateY(-8px);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(91, 95, 239, 0.35);
+}
+
+.plano--destaque:hover {
+  border-color: rgba(91, 95, 239, 0.65);
+}
+
+.plano__glow {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: var(--accent-glow);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.plano__top,
+.plano__features {
+  position: relative;
+  z-index: 1;
+}
+
+/* ────────────────────────────────────────
+   Topo do card
+──────────────────────────────────────── */
+.plano__badge-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.plano__nome {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.3px;
+}
+
+.plano__tag {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 980px;
+  letter-spacing: 0.02em;
+}
+
+.plano__tag--start {
+  background: var(--badge-start-bg);
+  color: var(--badge-start-fg);
+}
+.plano__tag--business {
+  background: var(--badge-biz-bg);
+  color: var(--badge-biz-fg);
+}
+.plano__tag--pro {
+  background: var(--badge-pro-bg);
+  color: var(--badge-pro-fg);
+}
+
+.plano__desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* ────────────────────────────────────────
+   Bloco de preços
+──────────────────────────────────────── */
+.plano__precos {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  padding: 16px;
+  background: var(--surface-2);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.plano--destaque .plano__precos {
+  background: rgba(91, 95, 239, 0.09);
+  border-color: rgba(91, 95, 239, 0.2);
+}
+
+.plano__preco-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.plano__label {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+}
+
+.plano__valor {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+}
+
+.plano__moeda {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.plano__num {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.plano--destaque .plano__num {
+  color: #a5a8ff;
+}
+
+.plano__periodo {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.plano__divisor {
+  width: 1px;
+  height: 36px;
+  background: var(--border-strong);
+  flex-shrink: 0;
+}
+
+/* Proposta box (Pro) */
+.plano__precos--pro {
+  background: var(--surface-2);
+}
+
+.plano__proposta-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.plano__proposta-box svg {
+  width: 28px;
+  height: 28px;
+  color: var(--badge-pro-fg);
+  flex-shrink: 0;
+}
+
+.plano__proposta-box p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ────────────────────────────────────────
+   Botões CTA
+──────────────────────────────────────── */
+.plano__btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 980px;
+  padding: 13px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: var(--font);
+  cursor: pointer;
+  transition:
+    background 0.18s,
+    color 0.18s,
+    box-shadow 0.18s,
+    transform 0.12s;
+  border: none;
+  letter-spacing: -0.1px;
+}
+
+.plano__btn:active {
+  transform: scale(0.97);
+}
+
+.plano__btn--outline {
+  background: transparent;
+  border: 1.5px solid var(--border-strong);
+  color: var(--text);
+}
+
+.plano__btn--outline:hover {
+  background: var(--surface-2);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.plano__btn--solid {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 6px 22px rgba(91, 95, 239, 0.38);
+}
+
+.plano__btn--solid:hover {
+  background: #6a6ef5;
+  box-shadow: 0 8px 30px rgba(91, 95, 239, 0.5);
+}
+
+/* ────────────────────────────────────────
+   Features list
+──────────────────────────────────────── */
+.plano__features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.plano__features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.plano--destaque .plano__features li {
+  color: #c4c5e8;
+}
+
+.feat-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  stroke: var(--accent);
+  fill: none;
+}
+
+.plano--start .feat-icon {
+  stroke: var(--badge-start-fg);
+}
+.plano--pro .feat-icon {
+  stroke: var(--badge-pro-fg);
+}
+.plano--business .feat-icon {
+  stroke: #818af9;
+}
+
+/* ────────────────────────────────────────
+   Nota de rodapé
+──────────────────────────────────────── */
+.planos-nota {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+/* ────────────────────────────────────────
+   Responsivo
+──────────────────────────────────────── */
+@media (max-width: 900px) {
+  .planos-grid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+  .plano--destaque {
+    transform: none;
+    order: -1;
+  }
+}
+
+@media (max-width: 500px) {
+  .plano {
+    padding: 22px 18px 26px;
+  }
+  .plano__num {
+    font-size: 22px;
+  }
+}

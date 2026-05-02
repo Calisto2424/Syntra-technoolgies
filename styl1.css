@@ -1,0 +1,278 @@
+:root {
+  --font:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    "Helvetica Neue", Arial, sans-serif;
+  --bg: #f5f5f7;
+  --white: #ffffff;
+  --text: #1d1d1f;
+  --muted: #6e6e73;
+  --border: #d2d2d7;
+  --badge-new-bg: #dce8fd;
+  --badge-new-fg: #1a56c4;
+  --badge-off-bg: #d9f2e1;
+  --badge-off-fg: #1a6b33;
+  --poupe-bg: #d9f2e1;
+  --poupe-fg: #1a6b33;
+  --btn-size: 40px;
+  --card-w: 200px;
+  --gap: 14px;
+  --radius: 18px;
+  --transition: 0.42s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─────────────────────────────────────────
+   Section wrapper
+───────────────────────────────────────── */
+.populares {
+  width: 100%;
+  max-width: 1150px;
+  margin: auto; /* 👈 resolve o problema */
+  background: #ffffff;
+  margin-bottom: 80px;
+}
+
+.populares__titulo {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: -0.2px;
+  margin-bottom: 32px;
+  color: var(--text);
+}
+
+/* ─────────────────────────────────────────
+   Carrossel layout
+───────────────────────────────────────── */
+.carrossel {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+}
+
+/* Viewport — mascara o overflow */
+.carrossel__viewport {
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Faixa deslizante */
+.carrossel__faixa {
+  display: flex;
+  gap: var(--gap);
+  transition: transform var(--transition);
+  will-change: transform;
+}
+
+/* ─────────────────────────────────────────
+   Card
+───────────────────────────────────────── */
+.card {
+  position: relative;
+  flex: 0 0 var(--card-w);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 14px 20px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition:
+    border-color 0.18s,
+    box-shadow 0.18s;
+  user-select: none;
+  margin: auto;
+}
+
+.card:hover {
+  border-color: #b0b0b8;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+}
+
+/* Área da imagem */
+.card__img-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+  margin-bottom: 14px;
+}
+
+.card__img-wrap img {
+  max-height: 120px;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.card:hover .card__img-wrap img {
+  transform: scale(1.04);
+}
+
+.card__poupe {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 9px;
+  border-radius: 980px;
+  background: var(--poupe-bg);
+  color: var(--poupe-fg);
+}
+
+.card__poupe::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #34c759;
+  flex-shrink: 0;
+}
+
+/* Badges */
+.card__badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 980px;
+  letter-spacing: 0.01em;
+  z-index: 1;
+}
+
+.card__badge--novo {
+  background: var(--badge-new-bg);
+  color: var(--badge-new-fg);
+}
+
+.card__badge--oferta {
+  background: var(--badge-off-bg);
+  color: var(--badge-off-fg);
+}
+
+/* descrição */
+.card__desc {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+/* melhora espaçamento geral */
+.card {
+  gap: 4px;
+}
+
+/* efeito premium no hover */
+.card:hover .card__desc {
+  color: #1d1d1f;
+}
+/* ─────────────────────────────────────────
+   Botões de navegação
+───────────────────────────────────────── */
+.carrossel__btn {
+  flex-shrink: 0;
+  width: var(--btn-size);
+  height: var(--btn-size);
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  transition:
+    background 0.15s,
+    border-color 0.15s,
+    opacity 0.2s;
+  flex-shrink: 0;
+}
+
+.carrossel__btn svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.carrossel__btn:hover {
+  background: #e8e8ed;
+  border-color: #b0b0b8;
+}
+
+.carrossel__btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* ─────────────────────────────────────────
+   Dots (indicadores)
+───────────────────────────────────────── */
+.carrossel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 24px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--border);
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+  border: none;
+  padding: 0;
+}
+
+.dot.ativo {
+  background: var(--text);
+  transform: scale(1.3);
+}
+
+/* ─────────────────────────────────────────
+   Responsivo
+───────────────────────────────────────── */
+@media (max-width: 900px) {
+  :root {
+    --card-w: 170px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --card-w: 150px;
+    --btn-size: 34px;
+  }
+
+  .carrossel__btn svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+/* remover aparência de link */
+.card {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* esconder preços completamente */
+.card__precos {
+  display: none;
+}
+
+/* melhorar clique */
+.card {
+  cursor: pointer;
+}

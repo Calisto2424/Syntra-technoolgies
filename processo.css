@@ -1,0 +1,223 @@
+/* ============================================
+     SYNTRA PROCESS — PREMIUM DESIGN SYSTEM
+     ============================================ */
+:root {
+  --syntra-surface: #ffffff;
+  --syntra-background: #f5f5f7;
+  /* cinza claríssimo Apple */
+  --syntra-text-primary: #1d1d1f;
+  --syntra-text-secondary: #86868b;
+  --syntra-text-tertiary: #6e6e73;
+  --syntra-border: #d2d2d7;
+  --syntra-accent: #0071e3;
+  /* azul Apple */
+  --syntra-accent-hover: #0077ed;
+  --syntra-badge-bg: #f2f2f6;
+  --syntra-badge-text: #1d1d1f;
+  --syntra-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --syntra-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --syntra-shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.08);
+  --syntra-radius: 24px;
+  --syntra-radius-sm: 16px;
+  --syntra-transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.syntra-process {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Inter", "SF Pro Display", "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f6fcfc;
+  padding: 70px 10px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.syntra-process *,
+.syntra-process *::before,
+.syntra-process *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.syntra-process__container {
+  max-width: 1024px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Cabeçalho */
+.syntra-process__header {
+  margin-bottom: 64px;
+}
+
+.syntra-process__title {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  color: var(--syntra-text-primary);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+/* Etapas — grid flexível */
+.syntra-process__steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin-bottom: 80px;
+}
+
+/* Cartão de etapa */
+.syntra-process__step {
+  background: var(--syntra-surface);
+  border: 1px solid var(--syntra-border);
+  border-radius: var(--syntra-radius);
+  padding: 30px 18px 20px;
+  text-align: center;
+  transition:
+    transform var(--syntra-transition),
+    box-shadow var(--syntra-transition);
+  box-shadow: var(--syntra-shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.syntra-process__step:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--syntra-shadow-md);
+  border-color: #c0c0c5;
+}
+
+/* Número */
+.syntra-process__step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--syntra-text-primary);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+/* Título da etapa */
+.syntra-process__step-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--syntra-text-primary);
+  margin-bottom: 8px;
+}
+
+/* Texto */
+.syntra-process__step-text {
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--syntra-text-secondary);
+  margin-bottom: 12px;
+  flex-grow: 1;
+}
+
+/* Badge informativo */
+.syntra-process__step-badge {
+  display: inline-block;
+  background: var(--syntra-badge-bg);
+  color: var(--syntra-badge-text);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-top: 4px;
+  letter-spacing: 0.02em;
+  border: 1px solid #e5e5ea;
+}
+
+/* CTA final */
+.syntra-process__cta {
+  background: var(--syntra-surface);
+  border: 1px solid var(--syntra-border);
+  border-radius: var(--syntra-radius);
+  padding: 48px 32px;
+  max-width: 540px;
+  margin: 0 auto;
+  box-shadow: var(--syntra-shadow-sm);
+}
+
+.syntra-process__cta-text {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--syntra-text-primary);
+  margin-bottom: 16px;
+}
+
+.syntra-process__cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #25d366;
+  /* WhatsApp green */
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.25);
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.syntra-process__cta-button:hover {
+  background: #128c7e;
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(18, 140, 126, 0.3);
+}
+
+.syntra-process__cta-button:active {
+  transform: scale(0.98);
+}
+
+/* Responsivo */
+@media (max-width: 860px) {
+  .syntra-process__steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .syntra-process__title {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 520px) {
+  .syntra-process__steps {
+    grid-template-columns: 1fr;
+  }
+
+  .syntra-process {
+    padding: 72px 16px;
+  }
+
+  .syntra-process__title {
+    font-size: 30px;
+  }
+
+  .syntra-process__subtitle {
+    font-size: 16px;
+  }
+
+  .syntra-process__cta {
+    padding: 36px 20px;
+  }
+}

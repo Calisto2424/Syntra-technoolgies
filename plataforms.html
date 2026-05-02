@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntra Technologies - Plataformas</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="dominio.css">
+    <link rel="stylesheet" href="processo.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="styl1.css">
+    <link rel="stylesheet" href="who.css">
+    <link rel="stylesheet" href="partners.css">
+    <link rel="stylesheet" href="plataforms.css">
+</head>
+
+<body>
+
+    <!-- LOCATION BANNER -->
+    <div class="location-banner" id="locationBanner">
+        <span>Choose another country or region to see content specific to your location.</span>
+        <div class="location-actions">
+            <select>
+                <option>Moçambique</option>
+                <option>Portugal</option>
+                <option>Angola</option>
+                <option>EUA</option>
+                <option>Brasil</option>
+            </select>
+            <button class="btn-continue">Continue</button>
+            <button class="banner-close"
+                onclick="document.getElementById('locationBanner').style.display='none'">✕</button>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header class="site-header">
+        <nav class="nav-inner">
+            <a class="nav-logo" href="index.html">
+                <span class="logo-syn">Syntra</span><span class="logo-dot">.</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="plataforms.html">Plataformas</a></li>
+                <li><a href="#">Automaçao</a></li>
+                <li><a href="e-mail.html">E-mail Profissional</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Como funciona?</a></li>
+                <li><a href="#">Suporte</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <button aria-label="Search" class="nav-icon-btn">
+                    <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.5 15.5l-4.04-4.04A5.97 5.97 0 0 0 13 8 5.97 5.97 0 0 0 8 2.03 5.97 5.97 0 0 0 2.03 8 5.97 5.97 0 0 0 8 13.97a5.97 5.97 0 0 0 3.46-1.11L15.5 17a1.06 1.06 0 0 0 1.5 0 1.06 1.06 0 0 0 0-1.5zM8 12.47A4.47 4.47 0 0 1 3.53 8 4.47 4.47 0 0 1 8 3.53 4.47 4.47 0 0 1 12.47 8 4.47 4.47 0 0 1 8 12.47z" />
+                    </svg>
+                </button>
+                <button aria-label="Shopping bag" class="nav-icon-btn">
+                    <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.24 4.5H12.5a3.5 3.5 0 0 0-7 0H2.76A1.26 1.26 0 0 0 1.5 5.76v9A1.26 1.26 0 0 0 2.76 16h12.48A1.26 1.26 0 0 0 16.5 14.74v-9A1.26 1.26 0 0 0 15.24 4.5zM9 2a2 2 0 0 1 2 2H7a2 2 0 0 1 2-2zm5.94 12.74H3.06V6h1.44v1.5a.56.56 0 0 0 1.12 0V6h6.76v1.5a.56.56 0 0 0 1.12 0V6h1.44z" />
+                    </svg>
+                </button>
+                <!-- Menu hamburguer (visível apenas em ecrãs pequenos) -->
+                <button class="nav-menu-toggle" id="menuToggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════
+     HERO BANNER
+════════════════════════════════════════════════ -->
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-container">
+
+            <!-- LEFT -->
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Plataformas
+                </h1>
+
+                <p class="hero-subtitle">
+                    As plataformas da Syntra integram websites, automação, e-mails profissionais e marketing digital
+                    numa única solução para aumentar alcance, autoridade e conversões.
+                </p>
+                <div class="hero-ctas">
+                    <a href="plataformas.html" class="btn-learn">Explorar</a>
+                    <a href="https://wa.me/258871582209?text=Olá, tenho interesse nos serviços da Syntra"
+                        class="btn-buy">Suporte</a>
+                </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="hero-image">
+                <img src="google an.png" alt="Plataforma Syntra">
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+     SOBRE A PLATAFORMA
+════════════════════════════════════════════════ -->
+    <section class="about-platform">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-wrap reveal">
+                    <!-- Substitua pela sua imagem original -->
+                    <img src="assistente.png" alt="Dashboard da Plataforma Syntra"
+                        onerror="this.style.background='var(--surface)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'">
+                    <div class="about-image-badge">
+                        <div class="badge-icon">🚀</div>
+                        <div class="badge-text">
+                            <strong>Setup em 48h</strong>
+                            <span>Activação rápida garantida</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text reveal reveal-delay-1">
+                    <div class="section-eyebrow">PlataformaS Syntra</div>
+
+                    <p class="section-body">
+                        A Syntra oferece um ecossistema digital completo para negócios em Moçambique.
+                        Integramos presença online, identidade digital, tráfego pago e ferramentas de crescimento
+                        numa solução única, gerida por especialistas locais.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="pricing-section" id="planos">
+        <div class="container">
+            <div class="pricing-header reveal">
+                <div class="section-eyebrow">Planos e Preços</div>
+                <h2 class="section-title">Escolha o plano <em>ideal</em><br>para o seu negócio</h2>
+                <p class="section-body">
+                    Planos pensados para cada fase do crescimento, do essencial ao completo.
+                    Todos incluem suporte local e manutenção.
+                </p>
+            </div>
+
+            <div class="pricing-grid">
+
+                <div class="plan-card reveal">
+                    <div class="plan-name">Plano</div>
+                    <div class="plan-title">Básico</div>
+
+
+                    <div class="plan-price-block">
+                        <span class="price-label">Aquisição única</span>
+                        <div class="price-row">
+                            <span class="price-currency">MT</span>
+                            <span class="price-amount">5.000</span>
+                        </div>
+                        <div class="price-sub">
+                            <span>Após activação:</span>
+                            <span class="price-divider"></span>
+                            <span><strong style="color:var(--ink);">358 MT</strong> / mês</span>
+                        </div>
+                    </div>
+
+                    <div class="plan-divider"></div>
+
+                    <ul class="plan-features">
+                        <li><span class="feature-check">✓</span> Google Business configurado e optimizado</li>
+                        <li><span class="feature-check">✓</span> Landing page profissional</li>
+                        <li><span class="feature-check">✓</span> Domínio registado (.co.mz ou .com)</li>
+                        <li><span class="feature-check">✓</span> 1 e-mail profissional corporativo</li>
+                        <li><span class="feature-check">✓</span> Manutenção técnica incluída</li>
+                        <li><span class="feature-check">✓</span> Suporte via WhatsApp</li>
+                    </ul>
+
+                    <a href="https://wa.me/258871582209?text=Olá, tenho interesse no Plano Básico da Syntra"
+                        class="plan-cta cta-outline" target="_blank">
+                        Começar com o Básico →
+                    </a>
+                </div>
+
+
+                <div class="plan-card featured reveal reveal-delay-1">
+                    <div class="plan-badge">Recomendado</div>
+                    <div class="plan-name" style="color:rgba(255,255,255,0.5)">Plano</div>
+                    <div class="plan-title">Plus</div>
+                    <div class="plan-tagline">Para negócios prontos a crescer com o tráfego pago.</div>
+
+                    <div class="plan-price-block">
+                        <span class="price-label">Aquisição anual</span>
+                        <div class="price-row">
+                            <span class="price-currency" style="color:var(--teal)">MT</span>
+                            <span class="price-amount">10.000</span>
+                        </div>
+                        <div class="price-sub">
+                            <span>Renovação mensal:</span>
+                            <span class="price-divider"></span>
+                            <span><strong style="color:rgba(255,255,255,0.8)">1.600 MT</strong> / mês</span>
+                        </div>
+                    </div>
+
+                    <div class="plan-divider"></div>
+
+                    <ul class="plan-features">
+                        <li><span class="feature-check">✓</span><span><span class="feature-inherit">Tudo do Plano
+                                    Básico</span>, mais:</span></li>
+                        <li><span class="feature-check">✓</span> 2 e-mails profissionais corporativos</li>
+                        <li><span class="feature-check">✓</span> Tráfego pago (Google Ads / Meta Ads)</li>
+                        <li><span class="feature-check">✓</span> Treinamento para a sua equipa</li>
+                        <li><span class="feature-check">✓</span> Relatórios mensais de performance</li>
+                        <li><span class="feature-check">✓</span> Suporte prioritário</li>
+                    </ul>
+
+                    <a href="https://wa.me/2588715822209?text=Olá, tenho interesse no Plano Plus da Syntra"
+                        class="plan-cta cta-filled" target="_blank">
+                        Activar o Plano Plus →
+                    </a>
+                </div>
+
+
+                <div class="plan-card premium reveal reveal-delay-2">
+                    <div class="plan-name" style="color:var(--gold); opacity:0.8">Plano</div>
+                    <div class="plan-title" style="color:var(--ink)">Premium</div>
+                    <div class="plan-tagline" style="color:var(--ink-40)">Solução total para empresas que exigem o
+                        máximo.</div>
+
+                    <div class="plan-price-block">
+                        <span class="price-label" style="color:var(--gold);">Investimento</span>
+                        <div style="margin-top: 4px;"><span class="consult-badge">Por consulta</span></div>
+                        <div class="price-sub" style="color:var(--ink-40); margin-top: 16px;">
+                            Orçamento personalizado<br>para o seu projecto
+                        </div>
+                    </div>
+
+                    <div class="plan-divider"></div>
+
+                    <ul class="plan-features">
+                        <li><span class="feature-check" style="color:var(--gold)">✓</span><span><span
+                                    style="font-style:italic; color:var(--gold)">Tudo do Plano Plus</span>, mais:</span>
+                        </li>
+                        <li><span class="feature-check" style="color:var(--gold)">✓</span> ChatBot inteligente para
+                            WhatsApp</li>
+                        <li><span class="feature-check" style="color:var(--gold)">✓</span> Integração avançada para
+                            website</li>
+                        <li><span class="feature-check" style="color:var(--gold)">✓</span> Marketing 5.0 (IA + Dados +
+                            Estratégia)</li>
+                        <li><span class="feature-check" style="color:var(--gold)">✓</span> Gestor de conta dedicado</li>
+                        <li><span class="feature-check" style="color:var(--gold)">✓</span> Relatórios executivos e
+                            dashboard</li>
+                    </ul>
+
+                    <a href="https://wa.me/2588715822209?text=Olá, tenho interesse no Plano Premium da Syntra"
+                        class="plan-cta cta-premium" target="_blank">
+                        Solicitar Proposta →
+                    </a>
+                </div>
+
+            </div>
+            <div class="pricing-note reveal">
+                <strong>Nota:</strong> Os valores de activação única cobrem a criação, configuração e lançamento
+                completo.
+                Os valores mensais garantem manutenção, actualizações e suporte contínuo.
+                Preços sujeitos a IVA. Pagamento via M-Pesa, E-mola ou transferência bancária.
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <section class="footer-cta">
+        <div class="container" style="max-width:680px; position:relative; z-index:2; padding:0;">
+            <div class="section-eyebrow" style="color:var(--accent); margin-bottom:20px;">Pronto para começar?</div>
+            <h2>O seu negócio merece<br><em>a melhor tecnologia</em></h2>
+            <p>Fale connosco hoje.</p>
+            <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+                <a href="https://wa.me/258871582209?text=Olá, tenho interesse nos serviços da Syntra"
+                    class="btn-primary" target="_blank">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg>
+                    Falar via WhatsApp
+                </a>
+                <a href="mailto:beligiofrancisco@gmail.com" class="btn-ghost">Enviar e-mail</a>
+            </div>
+        </div>
+    </section>
+    <section class="parceiros">
+        <div class="container">
+            <header class="parceiros__header">
+
+                <h2 class="parceiros__titulo">Empresas que confiam na <em>Syntra</em>.</h2>
+            </header>
+
+            <div class="carrossel">
+                <button class="carrossel__btn carrossel__btn--prev" id="btnPrev" aria-label="Anterior">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6" />
+                    </svg>
+                </button>
+
+                <div class="carrossel__viewport" id="viewport">
+                    <div class="carrossel__faixa" id="faixa">
+
+                        <!-- LOGO: GOOGLE -->
+                        <div class="card card--partner">
+                            <div class="card__logo-wrap">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+                                    alt="Google">
+                            </div>
+                        </div>
+
+                        <!-- LOGO: APPLE -->
+                        <div class="card card--partner">
+                            <div class="card__logo-wrap">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                                    alt="Apple">
+                            </div>
+                        </div>
+
+                        <!-- LOGO: BM (Banco de Moçambique) -->
+                        <div class="card card--partner">
+                            <div class="card__logo-wrap">
+                                <img src="mb.jpg" alt="Banco de Moçambique">
+                            </div>
+                        </div>
+
+                        <!-- LOGO: IGUAL I.A LDA -->
+                        <div class="card card--partner">
+                            <div class="card__logo-wrap">
+                                <img src="igual.png" alt="IGUAL I.A">
+                            </div>
+                        </div>
+
+                        <!-- LOGO: ITEL -->
+                        <div class="card card--partner">
+                            <div class="card__logo-wrap">
+                                <img src="itel.png" alt="Itel">
+                            </div>
+                        </div>
+
+                        <!-- Placeholder para próximas empresas -->
+                        <div class="card card--partner">
+                            <div class="card__logo-wrap">
+                                <img src="microsoft.png" alt="Microsoft">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="carrossel__btn carrossel__btn--next" id="btnNext" aria-label="Seguinte">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="carrossel__dots" id="dots"></div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- FOOTER APPLE-STYLE -->
+    <footer class="syntra-footer" id="contacto">
+        <div class="syntra-footer__container">
+
+            <!-- Navegação em colunas -->
+            <div class="syntra-footer__columns">
+
+                <!-- Coluna 1: Serviços -->
+                <div class="syntra-footer__column">
+                    <h4 class="syntra-footer__column-title">Serviços</h4>
+                    <ul class="syntra-footer__column-list">
+                        <li><a href="#">Domínios</a></li>
+                        <li><a href="#">E‑mail profissional</a></li>
+                        <li><a href="#">E‑commerce</a></li>
+                        <li><a href="#">Alojamento</a></li>
+                        <li><a href="#">Automação</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 2: Empresa -->
+                <div class="syntra-footer__column">
+                    <h4 class="syntra-footer__column-title">Empresa</h4>
+                    <ul class="syntra-footer__column-list">
+                        <li><a href="#">Sobre a Syntra</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Carreiras</a></li>
+                        <li><a href="#">Investidores</a></li>
+                        <li><a href="#">Eventos</a></li>
+                    </ul>
+                </div>
+
+
+
+                <!-- Coluna 4: Suporte -->
+                <div class="syntra-footer__column">
+                    <h4 class="syntra-footer__column-title">Suporte</h4>
+                    <ul class="syntra-footer__column-list">
+                        <li><a href="#">Perguntas frequentes</a></li>
+                        <li><a href=" #">Documentação</a></li>
+                        <li><a href="#">Estado dos serviços</a></li>
+                        <li><a href="#">Garantia de serviço</a></li>
+                        <li><a href="#">Reclamações</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 5: Legal -->
+                <div class="syntra-footer__column">
+                    <h4 class="syntra-footer__column-title">Legal</h4>
+                    <ul class="syntra-footer__column-list">
+                        <li><a href="#">Política de privacidade</a></li>
+                        <li><a href="#">Termos de utilização</a></li>
+                        <li><a href="#">Vendas e reembolsos</a></li>
+                        <li><a href="#">Informações legais</a></li>
+                        <li><a href="#">Mapa do site</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Linha inferior: formas de contacto, copyright, localização -->
+            <div class="syntra-footer__bottom">
+
+                <div class="syntra-footer__legal-row">
+                    <p class="syntra-footer__copyright">
+                        Copyright © <span id="current-year"></span> Syntra Technologies. Todos os direitos reservados.
+                    </p>
+                    <div class="syntra-footer__legal-links">
+                        <a href="#">Política de privacidade</a>
+                        <span class="syntra-footer__separator" aria-hidden="true">|</span>
+                        <a href="#">Termos de utilização</a>
+                        <span class="syntra-footer__separator" aria-hidden="true">|</span>
+                        <a href="#">Vendas e reembolsos</a>
+                        <span class="syntra-footer__separator" aria-hidden="true">|</span>
+
+                    </div>
+                    <p class="syntra-footer__country">Moçambique</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
+    <script src="config.js"></script>
+    <script src="dominio.js"></script>
+    <script src="js"></script>
+    <script src="index.js"></script>
+    <script src="plataforms.js"></script>
+    <script src="partners.js"></script>
+
+
+</body>
+
+</html>

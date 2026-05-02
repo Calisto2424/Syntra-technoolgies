@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntra Technologies</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="dominio.css">
+    <link rel="stylesheet" href="processo.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="styl1.css">
+    <link rel="stylesheet" href="who.css">
+    <link rel="stylesheet" href="partners.css">
+    <link rel="stylesheet" href="plataforms.css">
+</head>
+
+<body>
+
+    <!-- LOCATION BANNER -->
+    <div class="location-banner" id="locationBanner">
+        <span>Choose another country or region to see content specific to your location.</span>
+        <div class="location-actions">
+            <select>
+                <option>Moçambique</option>
+                <option>Portugal</option>
+                <option>Angola</option>
+                <option>EUA</option>
+                <option>Brasil</option>
+            </select>
+            <button class="btn-continue">Continue</button>
+            <button class="banner-close"
+                onclick="document.getElementById('locationBanner').style.display='none'">✕</button>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header class="site-header">
+        <nav class="nav-inner">
+            <a class="nav-logo" href="index.html">
+                <span class="logo-syn">Syntra</span><span class="logo-dot">.</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#">Home</a></li>
+                <li><a href="plataforms.html">Plataformas</a></li>
+                <li><a href="#">Automaçao</a></li>
+                <li><a href="e-mail.html">E-mail Profissional</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Como funciona?</a></li>
+                <li><a href="#">Suporte</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <button aria-label="Search" class="nav-icon-btn">
+                    <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.5 15.5l-4.04-4.04A5.97 5.97 0 0 0 13 8 5.97 5.97 0 0 0 8 2.03 5.97 5.97 0 0 0 2.03 8 5.97 5.97 0 0 0 8 13.97a5.97 5.97 0 0 0 3.46-1.11L15.5 17a1.06 1.06 0 0 0 1.5 0 1.06 1.06 0 0 0 0-1.5zM8 12.47A4.47 4.47 0 0 1 3.53 8 4.47 4.47 0 0 1 8 3.53 4.47 4.47 0 0 1 12.47 8 4.47 4.47 0 0 1 8 12.47z" />
+                    </svg>
+                </button>
+                <button aria-label="Shopping bag" class="nav-icon-btn">
+                    <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.24 4.5H12.5a3.5 3.5 0 0 0-7 0H2.76A1.26 1.26 0 0 0 1.5 5.76v9A1.26 1.26 0 0 0 2.76 16h12.48A1.26 1.26 0 0 0 16.5 14.74v-9A1.26 1.26 0 0 0 15.24 4.5zM9 2a2 2 0 0 1 2 2H7a2 2 0 0 1 2-2zm5.94 12.74H3.06V6h1.44v1.5a.56.56 0 0 0 1.12 0V6h6.76v1.5a.56.56 0 0 0 1.12 0V6h1.44z" />
+                    </svg>
+                </button>
+                <!-- Menu hamburguer (visível apenas em ecrãs pequenos) -->
+                <button class="nav-menu-toggle" id="menuToggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-container">
+
+            <!-- LEFT -->
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Construa e escale o seu negócio digital
+                </h1>
+
+                <p class="hero-subtitle">
+                    Soluções em desenvolvimento web, domínios, e-mails profissionais,
+                    formação e marketing digital.
+                </p>
+
+                <div class="hero-ctas">
+                    <a href="plataformas.html" class="btn-learn">Começar</a>
+                    <a href="https://wa.me/258871582209" class="btn-buy">Falar com especialista</a>
+                </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="hero-image">
+                <img src="web.png" alt="Plataforma Syntra">
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!--Mais Populares-->
+
+
+    <section class="populares">
+        <h2 class="populares__titulo">Nossos Serviços</h2>
+
+        <div class="carrossel">
+
+            <button class="carrossel__btn carrossel__btn--prev" id="btnPrev">
+                <svg viewBox="0 0 24 24">
+                    <polyline points="15 18 9 12 15 6" />
+                </svg>
+            </button>
+
+            <div class="carrossel__viewport">
+                <div class="carrossel__faixa">
+
+
+
+
+                    <!-- 1 -->
+                    <a href="/plataforms.html" class="card">
+                        <div class="card__img-wrap">
+                            <img src="web.png" alt="Websites">
+                        </div>
+                        <p class="card__nome">Desenvolvimento Web</p>
+                        <span class="card__desc">Websites profissionais com domínio e e-mail</span>
+
+                    </a>
+
+                    <!-- 2 -->
+                    <a href="/plataforms.html" class="card">
+                        <div class="card__img-wrap">
+                            <img src="robo.jpg" alt="Automação">
+                        </div>
+                        <p class="card__nome">Automação</p>
+                        <span class="card__desc">Bots e automação de atendimento digital</span>
+                    </a>
+                    <!-- 3 -->
+                    <a href="/plataforms.html" class="card">
+                        <div class="card__img-wrap">
+                            <img src="php.png" alt="Programação">
+                        </div>
+                        <p class="card__nome">Programação</p>
+                        <span class="card__desc">Desenvolvimento de sistemas e e-commerce</span>
+                    </a>
+                    <!-- 4 -->
+                    <a href="/plataforms.html" class="card">
+                        <div class="card__img-wrap">
+                            <img src="redes.jpg" alt="Sistemas de Redes">
+                        </div>
+                        <p class="card__nome">Sistemas de Redes</p>
+                        <span class="card__desc">Consultoria e formação em infraestrutura de redes</span>
+                    </a>
+
+                    <!-- 5-->
+                    <a href="/plataforms.html" class="card">
+                        <div class="card__img-wrap">
+                            <img src="kali.jpg" alt="Kali Linux">
+                        </div>
+                        <p class="card__nome">Kali Linux</p>
+                        <span class="card__desc">Segurança informática e formação prática</span>
+                    </a>
+
+
+                </div>
+            </div>
+
+            <button class="carrossel__btn carrossel__btn--next" id="btnNext">
+                <svg viewBox="0 0 24 24">
+                    <polyline points="9 18 15 12 9 6" />
+                </svg>
+            </button>
+
+        </div>
+
+        <div class="carrossel__dots"></div>
+    </section>
+
+
+
+    <!---Desenvolvimento web-->
+
+
+    <section class="web-section">
+
+        <div class="web-container">
+
+            <!-- TEXTO -->
+            <div class="web-text">
+                <h2>Sistema de Gestão Empresarial</h2>
+
+                <p>
+                    Desenvolvemos sistemas completos de gestão empresarial para controlar e otimizar todas as áreas do
+                    seu negócio.
+                    Desde faturação, controlo de stock, gestão de clientes e fornecedores até relatórios financeiros
+                    detalhados,
+                    oferecemos uma solução centralizada e eficiente.
+                </p>
+
+                <p>
+                    O sistema é seguro, intuitivo e acessível em qualquer dispositivo, permitindo acompanhar o
+                    desempenho da sua
+                    empresa em tempo real e tomar decisões estratégicas com mais precisão.
+                </p>
+
+                <button class="web-btn">
+                    Saber mais
+                </button>
+            </div>
+
+            <!-- IMAGEM -->
+            <div class="web-image">
+                <img src="Sige.png" alt="Desenvolvimento Web">
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- ═══════════════════════════════════════════════
+     VANTAGENS
+════════════════════════════════════════════════ -->
+    <section class="vantagens" id="vantagens">
+        <div class="container">
+            <header class="vantagens-header reveal">
+                <span class="eyebrow">Por que escolher a Syntra</span>
+                <h2 class="section-title">Vantagens que fazem a <em>diferença</em>.</h2>
+                <p class="section-body">
+                    Combinamos tecnologia de ponta com execução local para impulsionar o mercado moçambicano.
+                </p>
+            </header>
+
+            <div class="vantagens-grid">
+                <!-- Card 1 -->
+                <div class="vantagem-card reveal">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="2" y1="12" x2="22" y2="12" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                    </div>
+                    <h3>Presença Digital</h3>
+                    <p>Landing page, domínio e e-mail corporativo configurados para máxima conversão.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="vantagem-card reveal">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M23 6l-9.5 9.5-5-5L1 18" />
+                            <path d="M17 6h6v6" />
+                        </svg>
+                    </div>
+                    <h3>Crescimento Escalável</h3>
+                    <p>Gestão de tráfego pago focada em ROI e resultados reais para o seu setor.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="vantagem-card reveal">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 8V4H8" />
+                            <rect x="4" y="8" width="16" height="12" rx="2" />
+                            <path d="M2 14h2" />
+                            <path d="M20 14h2" />
+                            <path d="M15 13v2" />
+                            <path d="M9 13v2" />
+                        </svg>
+                    </div>
+                    <h3>Automação Inteligente</h3>
+                    <p>Marketing 5.0 e ChatBots que operam 24/7 para converter leads em clientes.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="vantagem-card reveal">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <h3>Suporte Dedicado</h3>
+                    <p>Acompanhamento técnico contínuo e atualizações críticas de segurança.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="vantagem-card reveal">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                        </svg>
+                    </div>
+                    <h3>Capacitação</h3>
+                    <p>Treinamos sua equipe para dominar as ferramentas e gerar independência.</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="vantagem-card reveal">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                    </div>
+                    <h3>Expertise Local</h3>
+                    <p>Presença física em Nampula com visão estratégica global.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="stats-section">
+        <div class="container">
+            <div style="text-align:center; margin-bottom: 64px;">
+
+                <h2 class="section-title" style="color:var(--black);">
+                    O nosso Potencial
+                </h2>
+            </div>
+            <div class="stats-grid reveal">
+                <div class="stat-cell">
+                    <span class="stat-icon">🏢</span>
+                    <span class="stat-number">120<span>+</span></span>
+                    <div class="stat-label">Empresas que utilizam<br>as nossas plataformas</div>
+                </div>
+                <div class="stat-cell">
+                    <span class="stat-icon">📊</span>
+                    <span class="stat-number">87<span>%</span></span>
+                    <div class="stat-label">Das empresas reportaram<br>aumento nas vendas</div>
+                </div>
+                <div class="stat-cell">
+                    <span class="stat-icon">⚡</span>
+                    <span class="stat-number">48<span>h</span></span>
+                    <div class="stat-label">Tempo médio de<br>activação do serviço</div>
+                </div>
+                <div class="stat-cell">
+                    <span class="stat-icon">🌍</span>
+                    <span class="stat-number">3<span>×</span></span>
+                    <div class="stat-label">Crescimento médio em<br>alcance online</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="cta-minimal">
+
+        <div class="cta-content">
+
+            <h2>Vamos construir algo sólido</h2>
+
+            <p>
+                Se o seu negócio precisa de estrutura digital,
+                estamos prontos para desenvolver a solução.
+            </p>
+
+            <button class="cta-btn">Contactar</button>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <!-- =============================================
+     SECÇÃO CORPORATIVA (ANTES DO FOOTER)
+     ============================================= -->
+    <section class="about-syntra" aria-label="Sobre a Syntra Technologies">
+
+        <div class="about-syntra__content">
+            <p>
+                Syntra Technologies, Lda é uma empresa de base tecnológica que opera sob o grupo Evorra Investment Group
+                (EIG), Lda,
+                oferecendo soluções digitais avançadas em desenvolvimento de software, plataformas web, automação,
+                serviços cloud,
+                digitalização de negócios e infraestrutura empresarial.
+            </p>
+            <p>
+                Com uma rede global de mais de 20 developers internacionais e nacionais, parcerias com mais de 8
+                empresas de tecnologia
+                e colaboração com mais de 250 parceiros de negócio, a Syntra Technologies já apoiou mais de 20.000
+                clientes em diversos setores.
+            </p>
+            <p>
+                Com mais de 4 anos de operação ativa, a Syntra Technologies foca-se em construir sistemas digitais
+                escaláveis,
+                seguros e de alto desempenho, adaptados a negócios modernos — desde startups a grandes empresas.
+
+                A Syntra oferece também programas de formação em TI, capacitando equipas e profissionais para a
+                transformação digital
+                e para a adoção de tecnologias emergentes.
+            </p>
+            <p>
+                A Syntra Technologies opera como parte do Evorra Investment Group (EIG), Lda, reforçando a sua missão de
+                entregar
+                ecossistemas tecnológicos inovadores, fiáveis e preparados para o futuro, nos mercados globais.
+            </p>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- FOOTER APPLE-STYLE -->
+    <footer class="syntra-footer" id="contacto">
+        <div class="syntra-footer__container">
+
+            <!-- Navegação em colunas -->
+            <div class="syntra-footer__columns">
+
+                <!-- Coluna 1: Serviços -->
+                <div class="syntra-footer__column">
+                    <h4 class="syntra-footer__column-title">Serviços</h4>
+                    <ul class="syntra-footer__column-list">
+                        <li><a href="#">Domínios</a></li>
+                        <li><a href="#">E‑mail profissional</a></li>
+                        <li><a href="#">E‑commerce</a></li>
+                        <li><a href="#">Alojamento</a></li>
+                        <li><a href="#">Automação</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 2: Empresa -->
+                <div class="syntra-footer__column">
+                    <h4 class="syntra-footer__column-title">Empresa</h4>
+                    <ul class="syntra-footer__column-list">
+                        <li><a href="#">Sobre a Syntra</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Carreiras</a></li>
+                        <li><a href="#">Investidores</a></li>
+                        <li><a href="#">Eventos</a></li>
+                    </ul>
+                </div>
+
+
+
+                <!-- Coluna 4: Suporte -->
+                <div class="syntra-footer__column">
+                    <h4 class="syntra-footer__column-title">Suporte</h4>
+                    <ul class="syntra-footer__column-list">
+                        <li><a href="#">Perguntas frequentes</a></li>
+                        <li><a href=" #">Documentação</a></li>
+                        <li><a href="#">Estado dos serviços</a></li>
+                        <li><a href="#">Garantia de serviço</a></li>
+                        <li><a href="#">Reclamações</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 5: Legal -->
+                <div class="syntra-footer__column">
+                    <h4 class="syntra-footer__column-title">Legal</h4>
+                    <ul class="syntra-footer__column-list">
+                        <li><a href="#">Política de privacidade</a></li>
+                        <li><a href="#">Termos de utilização</a></li>
+                        <li><a href="#">Vendas e reembolsos</a></li>
+                        <li><a href="#">Informações legais</a></li>
+                        <li><a href="#">Mapa do site</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Linha inferior: formas de contacto, copyright, localização -->
+            <div class="syntra-footer__bottom">
+
+                <div class="syntra-footer__legal-row">
+                    <p class="syntra-footer__copyright">
+                        Copyright © <span id="current-year"></span> Syntra Technologies. Todos os direitos reservados.
+                    </p>
+                    <div class="syntra-footer__legal-links">
+                        <a href="#">Política de privacidade</a>
+                        <span class="syntra-footer__separator" aria-hidden="true">|</span>
+                        <a href="#">Termos de utilização</a>
+                        <span class="syntra-footer__separator" aria-hidden="true">|</span>
+                        <a href="#">Vendas e reembolsos</a>
+                        <span class="syntra-footer__separator" aria-hidden="true">|</span>
+
+                    </div>
+                    <p class="syntra-footer__country">Moçambique</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
+    <script src="config.js"></script>
+    <script src="dominio.js"></script>
+    <script src="serv.js"></script>
+    <script src="index.js"></script>
+    <script src="partners.js"></script>
+    <script src="plataforms.js"></script>
+</body>
+
+</html>

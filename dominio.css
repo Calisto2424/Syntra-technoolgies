@@ -1,0 +1,248 @@
+
+        /* ===== RESET & BASE ===== */
+        .syntra-section {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: #f7fcfc;
+            padding: 3rem 1.5rem;
+            color: #1e293b;
+            box-sizing: border-box;
+        }
+
+        .syntra-section * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .syntra-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* ===== TÍTULO ===== */
+        .syntra-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 2rem;
+            letter-spacing: -0.5px;
+        }
+
+        @media (max-width: 600px) {
+            .syntra-title {
+                font-size: 1.6rem;
+            }
+        }
+
+        /* ===== INPUT ===== */
+        .syntra-input-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .syntra-input {
+            width: 100%;
+            max-width: 520px;
+            padding: 1rem 1.5rem;
+            font-size: 1.05rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+            background: #f8fafc;
+        }
+
+        .syntra-input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+            background: #ffffff;
+        }
+
+        /* ESTADO DE ERRO */
+        .syntra-input--error {
+            border-color: #dc2626 !important;
+            background: #fef2f2 !important;
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2) !important;
+            animation: shake 0.3s ease-in-out;
+        }
+
+        /* Animação de balançar */
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-6px);
+            }
+
+            50% {
+                transform: translateX(6px);
+            }
+
+            75% {
+                transform: translateX(-4px);
+            }
+        }
+
+        /* Mensagem de erro */
+        .syntra-input-error {
+            color: #dc2626;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+            text-align: center;
+            display: none;
+            /* escondida até ser ativada */
+            max-width: 520px;
+            width: 100%;
+            animation: fadeIn 0.2s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===== COLUNAS ===== */
+        .syntra-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        @media (max-width: 768px) {
+            .syntra-columns {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        /* ===== SUBTÍTULOS ===== */
+        .syntra-subtitle {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #334155;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== COLUNA ESQUERDA – DOMÍNIOS ===== */
+        .syntra-domain-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.9rem;
+        }
+
+        .syntra-domain-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.25rem 0.8rem;
+            background: #ffffff;
+            border: 2px solid #e2e8f0;
+            border-radius: 14px;
+            cursor: pointer;
+            transition: all 0.25s;
+            text-align: center;
+            font-family: inherit;
+            outline: none;
+        }
+
+        .syntra-domain-card:hover,
+        .syntra-domain-card:focus-visible {
+            border-color: #2563eb;
+            background: #f0f6ff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px -10px rgba(37, 99, 235, 0.2);
+        }
+
+        .domain-name {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.35rem;
+        }
+
+        .domain-price {
+            font-size: 0.9rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        /* ===== COLUNA DIREITA – E‑MAILS ===== */
+        .syntra-emails-box {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 1.5rem;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.9rem;
+        }
+
+        .syntra-email-item {
+            font-size: 1.05rem;
+            color: #1e293b;
+            padding: 0.5rem 0.75rem;
+            background: #ffffff;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            word-break: break-all;
+            transition: background 0.2s;
+        }
+
+        .syntra-email-item::before {
+            content: "✉️";
+            margin-right: 0.6rem;
+            opacity: 0.7;
+        }
+
+        /* Estado inválido nos e‑mails */
+        .syntra-email-item--invalid {
+            color: #dc2626;
+            background: #fef2f2;
+            border-color: #fecaca;
+        }
+
+        .syntra-hint {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #64748b;
+            text-align: center;
+        }
+
+        /* ===== RESPONSIVO EXTRA ===== */
+        @media (max-width: 480px) {
+            .syntra-domain-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .syntra-input {
+                font-size: 1rem;
+                padding: 0.9rem 1.2rem;
+            }
+
+            .domain-name {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
